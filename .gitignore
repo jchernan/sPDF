@@ -9,6 +9,7 @@ target/
 /.project
 /.settings/
 
+/.bsp
 /.idea
 /.idea_modules
 /bin/
