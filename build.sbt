@@ -27,8 +27,6 @@ fork in Test := true
 
 parallelExecution in Test := false
 
-logLevel in compile := Level.Warn
-
 // add dependencies on standard Scala modules, in a way
 // supporting cross-version publishing
 // taken from: http://github.com/scala/scala-module-dependency-sample
@@ -36,7 +34,7 @@ libraryDependencies := {
   CrossVersion.partialVersion(scalaVersion.value) match {
     case Some((2, scalaMajor)) if scalaMajor >= 11 =>
       libraryDependencies.value ++ Seq(
-        "org.scala-lang.modules" %% "scala-xml" % "1.2.0",
+        "org.scala-lang.modules" %% "scala-xml" % "2.2.0",
         "org.scala-lang.modules" %% "scala-parser-combinators" % "1.1.2"
       )
     case _ =>
